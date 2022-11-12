@@ -96,6 +96,12 @@ ok      github.com/kfirpeled/stringer/cmd/stringer      (cached)
   • release succeeded after 1s
 ```
 
+```sh
+❯ git tag -a v0.0.1 -m "First release"
+❯ git push origin v0.0.1
+❯ GITHUB_TOKEN="XXXiHbOge" goreleaser release --rm-dist
+```
+
 # Resources
 
 - https://gianarb.it/blog/golang-mockmania-cli-command-with-cobra
