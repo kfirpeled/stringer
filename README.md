@@ -49,5 +49,5 @@ ok      github.com/kfirpeled/stringer/cmd/stringer      (cached)
 
 # Resources
 
-https://gianarb.it/blog/golang-mockmania-cli-command-with-cobra
-https://www.thorsten-hans.com/lets-build-a-cli-in-go-with-cobra/
+- https://gianarb.it/blog/golang-mockmania-cli-command-with-cobra
+- https://www.thorsten-hans.com/lets-build-a-cli-in-go-with-cobra/
