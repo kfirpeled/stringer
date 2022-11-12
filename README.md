@@ -47,6 +47,55 @@ ok      github.com/kfirpeled/stringer/cmd/stringer      (cached)
 ?       github.com/kfirpeled/stringer/pkg/stringer      [no test files]
 ```
 
+# Distribute
+
+```sh
+❯ goreleaser release --snapshot --rm-dist
+  • starting release...
+  • loading config file                              file=.goreleaser.yaml
+  • loading environment variables
+  • getting and validating git state
+    • ignoring errors because this is a snapshot     error=git doesn't contain any tags. Either add a tag or use --snapshot
+    • building...                                    commit=1b761675d72ffe832b2655a5a4f15697c212b49f latest tag=v0.0.0
+    • pipe skipped                                   reason=disabled during snapshot mode
+  • parsing tag
+  • setting defaults
+  • running before hooks
+    • running                                        hook=go mod tidy
+    • running                                        hook=go generate ./...
+  • snapshotting
+    • building snapshot...                           version=0.0.1-next
+  • checking distribution directory
+  • loading go mod information
+  • build prerequisites
+  • writing effective config file
+    • writing                                        config=dist/config.yaml
+  • building binaries
+    • building                                       binary=dist/stringer_darwin_arm64/stringer
+    • building                                       binary=dist/stringer_linux_amd64_v1/stringer
+    • building                                       binary=dist/stringer_linux_arm64/stringer
+    • building                                       binary=dist/stringer_windows_386/stringer.exe
+    • building                                       binary=dist/stringer_windows_amd64_v1/stringer.exe
+    • building                                       binary=dist/stringer_windows_arm64/stringer.exe
+    • building                                       binary=dist/stringer_linux_386/stringer
+    • building                                       binary=dist/stringer_darwin_amd64_v1/stringer
+    • took: 1s
+  • archives
+    • creating                                       archive=dist/stringer_0.0.1-next_Darwin_arm64.tar.gz
+    • creating                                       archive=dist/stringer_0.0.1-next_Windows_i386.tar.gz
+    • creating                                       archive=dist/stringer_0.0.1-next_Windows_arm64.tar.gz
+    • creating                                       archive=dist/stringer_0.0.1-next_Linux_x86_64.tar.gz
+    • creating                                       archive=dist/stringer_0.0.1-next_Linux_arm64.tar.gz
+    • creating                                       archive=dist/stringer_0.0.1-next_Linux_i386.tar.gz
+    • creating                                       archive=dist/stringer_0.0.1-next_Darwin_x86_64.tar.gz
+    • creating                                       archive=dist/stringer_0.0.1-next_Windows_x86_64.tar.gz
+  • calculating checksums
+  • storing release metadata
+    • writing                                        file=dist/artifacts.json
+    • writing                                        file=dist/metadata.json
+  • release succeeded after 1s
+```
+
 # Resources
 
 - https://gianarb.it/blog/golang-mockmania-cli-command-with-cobra
